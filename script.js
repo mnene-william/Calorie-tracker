@@ -9,11 +9,11 @@ let foodItems = JSON.parse(localStorage.getItem('foodItems')) || [];
 
 // Calculate total calories
 function calculateTotalCalories() {
-    let sum = 0;
+    let total = 0;
     foodItems.forEach(item => {
-        sum += item.calories;
+       sum += item.calories;
     });
-    totalCalories.textContent = sum;
+    totalCalories.textContent = total;
 }
 
 // Render food items to the list
@@ -39,7 +39,7 @@ function addFoodItem(event) {
     if (foodName && calories) {
         foodItems.push({ name: foodName, calories: calories });
         localStorage.setItem('foodItems', JSON.stringify(foodItems));
-        renderFoodItems();
+        updateFoodItems();
         foodForm.reset();
     }
 }
@@ -50,7 +50,7 @@ function removeFoodItem(event) {
         const index = (event.target.dataset.index);
         foodItems.splice(index, 1);
         localStorage.setItem('foodItems', JSON.stringify(foodItems));
-        renderFoodItems();
+        updateFoodItems();
     }
 }
 
@@ -58,13 +58,13 @@ function removeFoodItem(event) {
 function resetCalorieCounter() {
     foodItems = [];
     localStorage.removeItem('foodItems');
-    renderFoodItems();
+    updateFoodItems();
 }
 
 // Event listeners
 foodForm.addEventListener('submit', addFoodItem);
 foodList.addEventListener('click', removeFoodItem);
-resetButton.addEventListener('click', resetCalorieCounter);
+resetBtn.addEventListener('click', resetCalorieCounter);
 
 // Initial render
-renderFoodItems();
+updateFoodItems();
