@@ -9,6 +9,9 @@
 <body>
     <div class="container">
         <h1>Calorie Counter</h1>
+         <div class="display">
+            <p>Total Calories: <br> <span id="total-calories">0</span></p>
+        </div>
 
         <form id="food-form">
             <label for="food-name">Food Item:</label>
@@ -20,11 +23,12 @@
             <button type="submit">Add Item</button>
             <p id="display-message"></p>
         </form>
+       
 
         <div id="food-list">
             <h2>Today's Food</h2>
             <ul id="food-items"></ul>
-            <p>Total Calories: <span id="total-calories">0</span></p>
+            
         </div>
 
         <button id="reset-button">Reset</button>

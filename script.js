@@ -23,8 +23,15 @@ function updateFoodItems() {
     foodItems.forEach((item, index) => {
         let list = document.createElement('li');
         list.innerHTML = `
-            ${item.name}: ${item.calories} calories
-            <button data-index="${index}">Remove</button>
+            <div class ="name">
+                 <h4>${item.name}</h4>
+            </div>
+            <div class="calories">
+                <span>${item.calories}</span>
+            </div>
+            <div class="button">
+                 <button data-index="${index}">Remove</button>
+            </div>
         `;
         foodList.appendChild(list);
     });
@@ -37,20 +44,23 @@ function addFoodItem(event) {
     const foodName = document.getElementById('food-name').value;
     const calories = (document.getElementById('calories').value);
 
-    if (foodName && calories) {
+    if (foodName && calories > 0) {
         foodItems.push({ name: foodName, calories: calories });
        
         message.textContent = "success"
+        message.style.color = "green"
         localStorage.setItem('foodItems', JSON.stringify(foodItems));
         updateFoodItems();
         foodForm.reset();
     }
-    setTimeout(() => message.textContent = "", 2000)
-}
-function displayMessage(){
-    
-}
 
+    else{
+        message.textContent = "Invalid information";
+        message.style.color = "red";
+    }
+    setTimeout(() => message.textContent = "", 2000)
+
+}
 
 function removeFoodItem(event) {
     if (event.target.tagName === 'BUTTON') {
