@@ -1,0 +1,53 @@
+.container {
+    font-family: sans-serif;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+#food-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#food-form label {
+    margin-bottom: 5px;
+}
+
+#food-form input {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#food-list {
+    margin-bottom: 20px;
+}
+
+#food-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#food-items li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+}
+
+#food-items li button {
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+
+#reset-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
