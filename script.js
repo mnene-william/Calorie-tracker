@@ -3,7 +3,7 @@ const foodForm = document.getElementById('food-form');
 const foodList = document.getElementById('food-items');
 const totalCalories = document.getElementById('total-calories');
 const resetBtn = document.getElementById('reset-btn');
-const displayMessage = document.getElementById("display-message");
+const message = document.getElementById("display-message");
 
 
 let foodItems = JSON.parse(localStorage.getItem('foodItems')) || [];
@@ -12,7 +12,7 @@ let foodItems = JSON.parse(localStorage.getItem('foodItems')) || [];
 function calculateTotalCalories() {
     let total = 0;
     foodItems.forEach(item => {
-       total += Number(item.calories);
+       total +=Number(item.calories);
     });
     totalCalories.textContent = total;
 }
@@ -39,13 +39,17 @@ function addFoodItem(event) {
 
     if (foodName && calories) {
         foodItems.push({ name: foodName, calories: calories });
-        displayMessage.textContent = "Entry successfully made"
+       
+        message.textContent = "success"
         localStorage.setItem('foodItems', JSON.stringify(foodItems));
         updateFoodItems();
         foodForm.reset();
     }
+    setTimeout(() => message.textContent = "", 2000)
 }
-
+function displayMessage(){
+    
+}
 
 
 function removeFoodItem(event) {
