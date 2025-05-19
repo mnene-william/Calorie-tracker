@@ -24,13 +24,13 @@ function updateFoodItems() {
         let list = document.createElement('li');
         list.innerHTML = `
             <div class ="name">
-                 <h4>${item.name}</h4>
+                <h4>${item.name}</h4>
             </div>
             <div class="calories">
-                <span>${item.calories}</span>
+                <span>${item.calories}Calories</span>
             </div>
             <div class="button">
-                 <button data-index="${index}">Remove</button>
+                <button data-index="${index}">Remove</button>
             </div>
         `;
         foodList.appendChild(list);
@@ -47,7 +47,7 @@ function addFoodItem(event) {
     if (foodName && calories > 0) {
         foodItems.push({ name: foodName, calories: calories });
        
-        message.textContent = "success"
+        message.textContent = "Entry successfully made!"
         message.style.color = "green"
         localStorage.setItem('foodItems', JSON.stringify(foodItems));
         updateFoodItems();
