@@ -61,6 +61,12 @@ form button{
     color: white;
     text-transform: uppercase;
     box-shadow: 0 3px 5px rgba(0, 0, 0.1);
+    opacity: 0.8;
+    cursor: pointer;
+
+}
+form button:hover{
+    opacity: 1;
 }
 ul li{
     display: flex;
@@ -70,4 +76,53 @@ ul li{
     font-size: 1rem;
     font-weight: bold;
     font-weight: 500;
+}
+.delete-button{
+ background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.2s;
+
+}
+.delete-button:hover{
+   
+    opacity: 1;
+}
+.list{
+background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.7;
+  transition: 0.2s;
+    
+}
+.list:hover{
+    opacity: 1;
+}
+#reset-btn{
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  opacity: 0.7;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#reset-btn:hover{
+    
+    color: white;
+    opacity: 1;
 }
