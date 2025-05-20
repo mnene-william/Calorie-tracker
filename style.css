@@ -175,6 +175,43 @@ background-color: #ddd;
         font-size: 0.85rem;
         padding: 6px;
     }
+}
+
+@media (max-width: 468px) {
+    .container {
+        max-width: 100%;
+        padding: 0.1rem;
+    }
+    .display {
+        font-size: 1rem;
+        height: 18vh;
+        flex-direction: column;
+        padding: 0.1rem;
+    }
+    .header1 div:first-child {
+        font-size: 1rem;
+    }
+    form {
+        flex-direction: column;
+        gap: 4px;
+    }
+    form input,
+    form button {
+        font-size: 0.75rem;
+        padding: 4px;
+    }
+    ul li {
+        font-size: 0.85rem;
+        padding: 0.25rem;
+    }
+    .delete-button,
+    .list,
+    #reset-btn {
+        font-size: 10px;
+        padding: 6px 8px;
+        margin: 1px 0;
+    }
+}
     ul li {
         display: flex;
         align-items: center;
@@ -188,4 +225,3 @@ background-color: #ddd;
         padding: 8px 12px;
         margin: 2px 0;
     }
-}
