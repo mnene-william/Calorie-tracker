@@ -53,7 +53,7 @@ foodForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const foodName = document.getElementById("food-name").value.trim();
     if (foodName) {
-        message.textContent = "Entry added successfully!";
+        message.textContent = "Item added successfully!";
         message.style.color = "green";
         setTimeout(() => {
             message.textContent = "";
@@ -102,6 +102,11 @@ resetBtn.addEventListener('click', () => {
     foodItems = [];
     localStorage.removeItem('foodItems');
     updateFoodItems();
+    message2.textContent = "Calorie Tracker has been reset successfully!"
+    message2.style.color = "green";
+     setTimeout(() => {
+            message2.textContent = "";
+        }, 2000);
 });
 
 updateFoodItems();
