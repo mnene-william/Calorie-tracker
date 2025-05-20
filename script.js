@@ -3,7 +3,7 @@ const foodList = document.getElementById('food-items');
 const totalCalories = document.getElementById('total-calories');
 const resetBtn = document.getElementById('reset-btn');
 const message = document.getElementById("displayMessage");
-const message2 = document.getElementById("displaymessage");
+const message2 = document.getElementById("display-message");
 
 let foodItems = JSON.parse(localStorage.getItem('foodItems')) || [];
 
